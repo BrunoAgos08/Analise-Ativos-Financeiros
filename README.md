@@ -3,6 +3,9 @@
 Este projeto tem como objetivo realizar uma análise quantitativa e comparativa entre ativos brasileiros e internacionais, utilizando métricas clássicas de mercado para avaliação de risco e retorno.
 
 ---
+# Motivação
+
+Como estudante de Física, desenvolvi forte base em análise quantitativa e modelagem matemática. Busco aplicar essas ferramentas no mercado financeiro, especialmente na avaliação de risco e retorno de ativos.
 
 # Objetivo
 
@@ -18,35 +21,39 @@ A proposta é identificar quais ativos apresentam melhor relação risco-retorno
 
 ---
 
-## 📌 Ativos Analisados
+# Ativos Analisados
 
 * **PETR4.SA** — Petrobras (Brasil)
 * **BBDC4.SA** — Bradesco (Brasil)
 * **SPY** — S&P 500 ETF (EUA)
 * **TLT** — Treasury Bonds ETF (EUA)
 
-👉 A escolha combina ativos de:
+A escolha combina ativos de:
 
 * renda variável brasileira
 * mercado internacional
 * renda fixa americana
 
----
 
 # Metodologia
 
 A análise foi realizada em Python utilizando dados históricos do Yahoo Finance.
 
-### 🔹 Coleta de dados
+# Coleta de dados
 
-* Preços de fechamento (`Close`)
-* Período: 2025 até o presente
+* Preços de fechamento (`Close`).
+* Período: 2025 até o presente. Mas o código pode ser adpatado para qualquer intervalo de tempo.
 
-### 🔹 Cálculo dos retornos
+# Cálculo dos retornos
 
-* Retornos simples (`pct_change`)
-* Retornos logarítmicos:
+Foram utilizados dois tipos de retorno na análise:
 
+Retorno simples (pct_change), utilizado principalmente para interpretação direta e visualização gráfica;
+Retorno logarítmico, utilizado nas métricas estatísticas.
+
+O retorno logarítmico foi adotado nas análises quantitativas por apresentar propriedades mais adequadas, como a aditividade ao longo do tempo e maior simetria estatística, evitando distorções presentes no retorno simples em variações percentuais elevadas.
+
+Dessa forma, os retornos logarítmicos foram utilizados para cálculo de volatilidade, Sharpe Ratio e correlação, enquanto os retornos simples auxiliam na interpretação intuitiva dos movimentos de preço.
 
 
 # Métricas utilizadas
@@ -57,7 +64,7 @@ A análise foi realizada em Python utilizando dados históricos do Yahoo Finance
 * **Drawdown máximo**
 * **Matriz de correlação**
 
----
+
 
 # Resultados
 
